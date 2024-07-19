@@ -43,6 +43,8 @@ namespace TakeAwayNight.OrderApi.Controllers
             await _removeAdressCommandHandler.Handle(new RemoveAdressCommand(id));
             return Ok("Silme Başarılı");
         }
+
+        [HttpGet("{id}")]
         public async Task<IActionResult> GetAdress(int id)
 
         {
@@ -50,7 +52,7 @@ namespace TakeAwayNight.OrderApi.Controllers
             return Ok(values);
 
         }
-        [HttpGet("{id}")]
+        [HttpPut]
         public async Task<IActionResult> UpdateAdress(UpdateAdressCommand command)
         {
             await _updateAdressCommandHandler.Handle(command);

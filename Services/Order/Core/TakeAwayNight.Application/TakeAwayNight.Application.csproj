@@ -10,4 +10,15 @@
     <ProjectReference Include="..\TakeAwayNight.Domain\TakeAwayNight.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Features\CQRS\Commands\OrderingCommands\" />
+    <Folder Include="Features\CQRS\Handlers\OrderingHandlers\" />
+    <Folder Include="Features\CQRS\Queries\OrderingQueries\" />
+    <Folder Include="Features\CQRS\Results\OrderingResults\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="12.3.0" />
+  </ItemGroup>
+
 </Project>
